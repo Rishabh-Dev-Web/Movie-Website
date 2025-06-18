@@ -1,0 +1,851 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Mania - Watch Movies Online</title>
+      <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <nav class="fixed top-0 w-full bg-gradient-to-b from-black to-transparent z-50 px-4 md:px-12 py-4">
+        <div class="flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="text-red-600 font-bold text-3xl mr-10">MOVIE</div>
+
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="relative">
+                    <input type="text" placeholder="Search" class="bg-black bg-opacity-60 text-white px-3 py-1 rounded border border-gray-600 focus:outline-none focus:border-white transition">
+                </div>
+                <div class="w-8 h-8 bg-blue-500 rounded text-white flex items-center justify-center">
+                    <span>R</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+   <section id="heroSection" class="hero-section relative flex items-center bg-cover bg-center bg-no-repeat h-[60vh] sm:h-[50vh] md:h-[40vh]"
+ style="background-image: url('Avengers.jpg');">
+
+    <div class="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
+
+    <div class="container mx-auto px-4 md:px-12 z-10 relative text-white">
+        <div class="max-w-2xl">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">Avengers: Endgame</h1>
+
+            <div class="flex flex-wrap items-center space-x-4 text-sm md:text-base mb-4">
+                <span class="text-green-400 font-semibold">97% Match</span>
+                <span>2019</span>
+                <span class="border border-gray-400 px-1 text-xs">PG-13</span>
+                <span>3h 1m</span>
+                <span class="border border-gray-400 px-1 text-xs">HD</span>
+            </div>
+
+            <p class="text-base sm:text-lg mb-6">
+                After Thanos, an intergalactic warlord, disintegrates half of the universe, the Avengers must reunite and assemble again to reinvigorate their trounced allies and restore balance.
+            </p>
+
+            <div class="flex flex-wrap space-x-4">
+                <a href="avengers-trailer.html" target="_blank"
+   class="bg-white text-black px-5 py-2 rounded flex items-center hover:bg-opacity-80 transition text-sm sm:text-base">
+  <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+    <path d="M4.555 5.168A1 1 0 003 6v8a1 1 0 001.555.832L10 11.202V14a1 1 0 001.555.832l6-4a1 1 0 000-1.664l-6-4A1 1 0 0010 6v2.798L4.555 5.168z"/>
+  </svg>
+  Trailer
+</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <main class="container mx-auto px-4 md:px-12 pb-20 mt-20 relative z-20">
+
+        <section class="mb-8">
+            <h2 class="text-xl md:text-2xl font-bold mb-4">Superhero Movies</h2>
+
+            <div class="category-container flex space-x-4 overflow-x-auto pb-4">
+                <div class="movie-card flex-shrink-0 w-40 md:w-48">
+                    <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('Iron.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+                            <div class="flex items-center text-xs">                                
+                            </div>
+                          <button onclick="openPreview('https://www.youtube.com/embed/8ugaeA-nMTc')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-card flex-shrink-0 w-40 md:w-48">
+                    <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('captainamerica.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+                         
+                            <div class="flex items-center text-xs">
+                            </div>
+                         <button onclick="openPreview('https://www.youtube.com/embed/JerVrbLldXw')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button>                       
+                     </div>
+                    </div>
+                </div>
+                <div class="movie-card flex-shrink-0 w-40 md:w-48">
+                    <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('noway.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+                            <div class="flex items-center text-xs">
+                            </div>
+                        <button onclick="openPreview('https://www.youtube.com/embed/JfVOs4VSpmA')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button> 
+                         </div>
+                    </div>
+                </div>
+
+                <div class="movie-card flex-shrink-0 w-40 md:w-48">
+                    <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('xmen.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+                            <div class="flex items-center text-xs">
+                            </div>
+                        <button onclick="openPreview('https://www.youtube.com/embed/COvnHv42T-A')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button> 
+                    </div>
+                    </div>
+                </div>
+
+                <div class="movie-card flex-shrink-0 w-40 md:w-48">
+                    <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('avengers1.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+                            
+                            <div class="flex items-center text-xs">
+                            </div>
+                        <button onclick="openPreview('https://www.youtube.com/embed/tmeOjFno6Do')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button> 
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-card flex-shrink-0 w-40 md:w-48">
+                    <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('justice.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+                            <div class="flex items-center text-xs">
+                            </div>
+                        <button onclick="openPreview('https://www.youtube.com/embed/3cxixDgHUYw')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button> 
+                         </div>
+                    </div>
+                </div>
+                <div class="movie-card flex-shrink-0 w-40 md:w-48">
+                    <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('quantum.jpg.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+                            <div class="flex items-center text-xs">
+                            </div>
+                        <button onclick="openPreview('https://www.youtube.com/embed/ZlNFpri-Y40')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button> 
+                         </div>
+                    </div>
+                </div>
+                 <div class="movie-card flex-shrink-0 w-40 md:w-48">
+  <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('thorlove.jpg');">
+    <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+      <div class="flex items-center text-xs">
+      </div>
+      <button onclick="openPreview('https://www.youtube.com/embed/Go8nTmfrQd8')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button> 
+                       </div>
+  </div>
+</div>
+<div class="movie-card flex-shrink-0 w-40 md:w-48">
+                    <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('guardian.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+                            <div class="flex items-center text-xs">
+                            </div>
+                        <button onclick="openPreview('https://www.youtube.com/embed/d96cjJhvlMA')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button> 
+                         </div>
+                    </div>
+                </div>
+
+                <div class="movie-card flex-shrink-0 w-40 md:w-48">
+                    <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('blackmovie.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+                            <div class="flex items-center text-xs">
+                            </div>
+                        <button onclick="openPreview('https://www.youtube.com/embed/ybji16u608U')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button> 
+                          </div>
+                    </div>
+                </div>
+                    
+                                <div class="movie-card flex-shrink-0 w-40 md:w-48">
+                    <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('panther.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+                            <div class="flex items-center text-xs">
+                            </div>
+                        <button onclick="openPreview('https://www.youtube.com/embed/xjDjIWPwcPU')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button> 
+                         </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-xl md:text-2xl font-bold mb-4">Thriller/Adventure Movies</h2>
+
+            <div class="category-container flex space-x-4 overflow-x-auto pb-4">
+                <div class="movie-card flex-shrink-0 w-40 md:w-48">
+                    <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('extraction.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+                            <div class="flex items-center text-xs">                                
+                            </div>
+                        <button onclick="openPreview('https://www.youtube.com/embed/Y274jZs5s7s')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button>         
+                         </div>
+                    </div>
+                </div>
+                <div class="movie-card flex-shrink-0 w-40 md:w-48">
+                    <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('gray.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+                         
+                            <div class="flex items-center text-xs">
+                            </div>
+                        <button onclick="openPreview('https://www.youtube.com/embed/BmllggGO4pM')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button> 
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-card flex-shrink-0 w-40 md:w-48">
+                    <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('troll.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+                            <div class="flex items-center text-xs">
+                            </div>
+                        <button onclick="openPreview('https://www.youtube.com/embed/AiohkY_XQYQ')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button>    
+                        </div>
+                    </div>
+                </div>
+
+                <div class="movie-card flex-shrink-0 w-40 md:w-48">
+                    <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('boston.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+                            <div class="flex items-center text-xs">
+                            </div>
+                        <button onclick="openPreview('https://www.youtube.com/embed/N_yfmHCkSB0')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="movie-card flex-shrink-0 w-40 md:w-48">
+                    <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('everest.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+                            
+                            <div class="flex items-center text-xs">
+                            </div>
+                        <button onclick="openPreview('https://www.youtube.com/embed/79Q2rrQlPW4')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="movie-card flex-shrink-0 w-40 md:w-48">
+                    <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('jurassic.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+                            <div class="flex items-center text-xs">
+                            </div>
+                        <button onclick="openPreview('https://www.youtube.com/embed/vn9mMeWcgoM')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button> 
+                         </div>
+                    </div>
+                </div>
+                 <div class="movie-card flex-shrink-0 w-40 md:w-48">
+  <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('dunkirk.jpg');">
+    <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+      <div class="flex items-center text-xs">
+      </div>
+     <button onclick="openPreview('https://www.youtube.com/embed/F-eMt3SrfFU')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button>
+                        </div>
+  </div>
+</div>
+
+                <div class="movie-card flex-shrink-0 w-40 md:w-48">
+                    <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('martian.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+                            <div class="flex items-center text-xs">
+                            </div>
+                        <button onclick="openPreview('https://www.youtube.com/embed/ej3ioOneTy8')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button>
+                        </div>
+                    </div>
+                </div>
+                    
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-xl md:text-2xl font-bold mb-4">Biographical Movies</h2>
+
+            <div class="category-container flex space-x-4 overflow-x-auto pb-4">
+                <div class="movie-card flex-shrink-0 w-40 md:w-48">
+                    <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('truespirit.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+                            <div class="flex items-center text-xs">                                
+                            </div>
+                        <button onclick="openPreview('https://www.youtube.com/embed/UPYD9dw6jmA')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-card flex-shrink-0 w-40 md:w-48">
+                    <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('theswimmers.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+                         
+                            <div class="flex items-center text-xs">
+                            </div>
+                        <button onclick="openPreview('https://www.youtube.com/embed/ObN4krVV20Y')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button>
+                         </div>
+                    </div>
+                </div>
+                <div class="movie-card flex-shrink-0 w-40 md:w-48">
+                    <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('clouds.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+                            <div class="flex items-center text-xs">
+                            </div>
+                        <button onclick="openPreview('https://www.youtube.com/embed/OWEgUhWU4g4')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button>
+                         </div>
+                    </div>
+                </div>
+                <div class="movie-card flex-shrink-0 w-40 md:w-48">
+                    <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('horse.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+                            
+                            <div class="flex items-center text-xs">
+                            </div>
+                        <button onclick="openPreview('https://www.youtube.com/embed/BK0rbzLk0YI')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button>
+                         </div>
+                    </div>
+                </div>
+                <div class="movie-card flex-shrink-0 w-40 md:w-48">
+                    <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('ms\ dhoni.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+                            <div class="flex items-center text-xs">
+                            </div>
+                        <button onclick="openPreview('https://www.youtube.com/embed/6L6XqWoS8tw')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-card flex-shrink-0 w-40 md:w-48">
+                    <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('joy.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+                            <div class="flex items-center text-xs">
+                            </div>
+                        <button onclick="openPreview('https://www.youtube.com/embed/Qoyn5BCm37o')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button>
+                        </div>
+                    </div>
+                </div>
+                 <div class="movie-card flex-shrink-0 w-40 md:w-48">
+  <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('king.jpg');">
+    <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+      <div class="flex items-center text-xs">
+      </div>
+     <button onclick="openPreview('https://www.youtube.com/embed/BKP_0z52ZAw')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button>
+                        </div>
+  </div>
+</div>
+<div class="movie-card flex-shrink-0 w-40 md:w-48">
+                    <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('theory.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+                            <div class="flex items-center text-xs">
+                            </div>
+                        <button onclick="openPreview('https://www.youtube.com/embed/Salz7uGp72c')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="movie-card flex-shrink-0 w-40 md:w-48">
+                    <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('moneyball.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+                            <div class="flex items-center text-xs">
+                            </div>
+                        <button onclick="openPreview('https://www.youtube.com/embed/D1R-LwHbld4')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button>
+                        </div>
+                    </div>
+                </div>                  
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-xl md:text-2xl font-bold mb-4">Action Movies</h2>
+
+            <div class="category-container flex space-x-4 overflow-x-auto pb-4">
+                <div class="movie-card flex-shrink-0 w-40 md:w-48">
+                    <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('godzilla.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+                            <div class="flex items-center text-xs">                                
+                            </div>
+                        <button onclick="openPreview('https://www.youtube.com/embed/odM92ap8_c0')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-card flex-shrink-0 w-40 md:w-48">
+                    <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('topgun.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+                         
+                            <div class="flex items-center text-xs">
+                            </div>
+                        <button onclick="openPreview('https://www.youtube.com/embed/giXco2jaZ_4')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button>
+                        </div>
+                    </div>
+                </div>
+
+<div class="movie-card flex-shrink-0 w-40 md:w-48">
+  <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('pacific.jpg');">
+    <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+      <div class="flex items-center text-xs">
+      </div>
+    <button onclick="openPreview('https://www.youtube.com/embed/fUjicxMPDzs')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button>
+                        </div>
+  </div>
+</div>
+
+                <div class="movie-card flex-shrink-0 w-40 md:w-48">
+                    <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('tomb.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+                            <div class="flex items-center text-xs">
+                            </div>
+                        <button onclick="openPreview('https://www.youtube.com/embed/8ndhidEmUbI')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-card flex-shrink-0 w-40 md:w-48">
+                    <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('fast.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+                            
+                            <div class="flex items-center text-xs">
+                            </div>
+                        <button onclick="openPreview('https://www.youtube.com/embed/HZ7PAyCDwEg')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button>
+                         </div>
+                    </div>
+                </div>
+
+                <div class="movie-card flex-shrink-0 w-40 md:w-48">
+                    <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('mission.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+                            <div class="flex items-center text-xs">
+                            </div>
+                        <button onclick="openPreview('https://www.youtube.com/embed/cFMOjxCu700')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button>
+                        </div>
+                    </div>
+                </div>
+                 
+<div class="movie-card flex-shrink-0 w-40 md:w-48">
+                    <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('red.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+                            <div class="flex items-center text-xs">
+                            </div>
+                        <button onclick="openPreview('https://www.youtube.com/embed/U8XH3W0cMss')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button>
+                         </div>
+                    </div>
+                </div>                  
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-xl md:text-2xl font-bold mb-4">Family/Kids Movies</h2>
+
+            <div class="category-container flex space-x-4 overflow-x-auto pb-4">
+                <div class="movie-card flex-shrink-0 w-40 md:w-48">
+                    <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('kung.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+                            <div class="flex items-center text-xs">                                
+                            </div>
+                        <button onclick="openPreview('https://www.youtube.com/embed/yqN7nHM1YTA')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button>
+                         </div>
+                    </div>
+                </div>
+                <div class="movie-card flex-shrink-0 w-40 md:w-48">
+                    <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('little.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+                         
+                            <div class="flex items-center text-xs">
+                            </div>
+                        <button onclick="openPreview('https://www.youtube.com/embed/AST2-4db4ic')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button>
+                          </div>
+                    </div>
+                </div>
+                <div class="movie-card flex-shrink-0 w-40 md:w-48">
+                    <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('mali.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+                            <div class="flex items-center text-xs">
+                            </div>
+                        <button onclick="openPreview('https://www.youtube.com/embed/28U4LxdkNWI')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-card flex-shrink-0 w-40 md:w-48">
+                    <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('moana.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+                            
+                            <div class="flex items-center text-xs">
+                            </div>
+                        <button onclick="openPreview('https://www.youtube.com/embed/LKFuXETZUsI')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-xl md:text-2xl font-bold mb-4">Horror Movies</h2>
+
+            <div class="category-container flex space-x-4 overflow-x-auto pb-4">
+                <div class="movie-card flex-shrink-0 w-40 md:w-48">
+                    <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('conjuring1.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+                            <div class="flex items-center text-xs">                                
+                            </div>
+                        <button onclick="openPreview('https://www.youtube.com/embed/k10ETZ41q5o')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button>
+                         </div>
+                    </div>
+                </div>
+                <div class="movie-card flex-shrink-0 w-40 md:w-48">
+                    <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('breath.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+                         
+                            <div class="flex items-center text-xs">
+                            </div>
+                        <button onclick="openPreview('https://www.youtube.com/embed/76yBTNDB6vU')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-card flex-shrink-0 w-40 md:w-48">
+                    <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('conjuring.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+                            <div class="flex items-center text-xs">
+                            </div>
+                        <button onclick="openPreview('https://www.youtube.com/embed/VFsmuRPClr4')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-card flex-shrink-0 w-40 md:w-48">
+                    <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('ana.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+                            
+                            <div class="flex items-center text-xs">
+                            </div>
+                        <button onclick="openPreview('https://www.youtube.com/embed/bCxm7cTpBAs')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button>
+                          </div>
+                    </div>
+                </div>
+                <div class="movie-card flex-shrink-0 w-40 md:w-48">
+                    <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('split.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+                            <div class="flex items-center text-xs">
+                            </div>
+                        <button onclick="openPreview('https://www.youtube.com/embed/KIpGKumxiGg')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-card flex-shrink-0 w-40 md:w-48">
+                    <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('wolf.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+                            <div class="flex items-center text-xs">
+                            </div>
+                        <button onclick="openPreview('https://www.youtube.com/embed/kAw4PH2IQgo')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button>
+                        </div>
+                    </div>
+                </div>
+                 <div class="movie-card flex-shrink-0 w-40 md:w-48">
+                 <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('quite.jpg');">
+                 <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+                 <div class="flex items-center text-xs">
+             </div>
+        <button onclick="openPreview('https://www.youtube.com/embed/BpdDN9d9Jio')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button>
+                        </div>
+  </div>
+</div>                    
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-xl md:text-2xl font-bold mb-4">Trending Shows</h2>
+            <div class="category-container flex space-x-4 overflow-x-auto pb-4">
+                <div class="movie-card flex-shrink-0 w-40 md:w-48">
+  <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('wednesday.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+                            
+                            <div class="flex items-center text-xs">
+                            </div>
+                        <button onclick="openPreview('https://www.youtube.com/embed/Di310WS8zLk')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button>
+                         </div>
+                    </div>
+                </div>
+                <div class="movie-card flex-shrink-0 w-40 md:w-48">
+  <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('guide.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">                           
+                            <div class="flex items-center text-xs">
+                              </div>
+                        <button onclick="openPreview('https://www.youtube.com/embed/wA39lIDm75Y')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-card flex-shrink-0 w-40 md:w-48">
+  <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('last.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+                            <div class="flex items-center text-xs">
+                            </div>
+                        <button onclick="openPreview('https://www.youtube.com/embed/uLtkt8BonwM')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-card flex-shrink-0 w-40 md:w-48">
+  <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('doctor.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+                            <div class="flex items-center text-xs">
+                            </div>
+                        <button onclick="openPreview('https://www.youtube.com/embed/lnY9FWUTY84')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button>
+                         </div>
+                    </div>
+                </div>
+                <div class="movie-card flex-shrink-0 w-40 md:w-48">
+  <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('men.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+                            <div class="flex items-center text-xs">
+                            </div>
+                        <button onclick="openPreview('https://www.youtube.com/embed/htQsI-b9dgc')" class="mt-2 bg-red-600 text-white px-3 py-1 rounded text-sm w-full hover:bg-red-700 transition">
+                         Play Trailer
+                        </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        
+    </main>
+
+    <footer class="bg-black bg-opacity-50 py-10 px-4 md:px-12">
+        <div class="container mx-auto">
+            <div class="text-gray-500 mb-6">Questions? Call 1-800-MOVIE</div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li><a href="#" class="hover:underline">FAQ</a></li>
+                        <li><a href="#" class="hover:underline">Investor Relations</a></li>
+                        <li><a href="#" class="hover:underline">Privacy</a></li>
+                        <li><a href="#" class="hover:underline">Speed Test</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li><a href="#" class="hover:underline">Help Center</a></li>
+                        <li><a href="#" class="hover:underline">Jobs</a></li>
+                        <li><a href="#" class="hover:underline">Cookie Preferences</a></li>
+                        <li><a href="#" class="hover:underline">Legal Notices</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li><a href="#" class="hover:underline">Account</a></li>
+                        <li><a href="#" class="hover:underline">Ways to Watch</a></li>
+                        <li><a href="#" class="hover:underline">Corporate Information</a></li>
+                        <li><a href="#" class="hover:underline">Only on Movie Mania</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li><a href="#" class="hover:underline">Media Center</a></li>
+                        <li><a href="#" class="hover:underline">Terms of Use</a></li>
+                        <li><a href="#" class="hover:underline">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 text-sm text-gray-500">
+                © 2023 Movie Mania, Inc.
+            </div>
+        </div>
+    </footer>
+
+    <div id="trailerModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">×</span>
+            <div class="video-container">
+                <iframe id="trailerPlayer" width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.movie-card').forEach(card => {
+            card.addEventListener('click', () => {
+                console.log('Movie card clicked (not play button)');
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.remove('bg-gradient-to-b', 'from-black', 'to-transparent');
+                nav.classList.add('bg-black');
+            } else {
+                nav.classList.add('bg-gradient-to-b', 'from-black', 'to-transparent');
+                nav.classList.remove('bg-black');
+            }
+        });
+
+        const trailerModal = document.getElementById('trailerModal');
+        const trailerPlayer = document.getElementById('trailerPlayer');
+        const closeButton = document.querySelector('.close-button');
+        const playTrailerButtons = document.querySelectorAll('.play-trailer-btn'); 
+        const heroPlayButton = document.getElementById('playTrailerButton'); 
+
+        const heroSection = document.getElementById('heroSection');
+
+        function openTrailerModal(trailerId) {
+            trailerPlayer.src = `https://www.youtube.com/embed/${trailerId}?autoplay=1&rel=0`;
+            trailerModal.style.display = 'flex'; 
+            heroSection.classList.add('zoomed-out'); 
+        }
+
+        function closeTrailerModal() {
+            trailerModal.style.display = 'none';
+            trailerPlayer.src = ''; 
+            heroSection.classList.remove('zoomed-out'); 
+        }
+
+        heroPlayButton.addEventListener('click', () => {
+            const avengersTrailerId = 'TyJgE9b2Hk0'; 
+            openTrailerModal(avengersTrailerId);
+        });
+
+        playTrailerButtons.forEach(button => {
+            button.addEventListener('click', (event) => {
+                event.stopPropagation(); 
+                const trailerId = button.dataset.trailerId;
+                if (trailerId) {
+                    openTrailerModal(trailerId);
+                }
+            });
+        });
+
+        closeButton.addEventListener('click', () => {
+            closeTrailerModal();
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target == trailerModal) {
+                closeTrailerModal();
+            }
+        });
+    </script>
+
+
+<div id="previewOverlay" class="fixed inset-0 bg-zinc-900 bg-opacity-90 text-white z-50 flex items-center justify-center transform scale-0 transition-transform duration-300 ease-out px-2 sm:px-4">
+    <div class="w-full max-w-4xl max-h-[90vh] overflow-y-auto p-4 sm:p-6 bg-zinc-800 rounded-xl shadow-2xl relative">
+        <button onclick="closePreview()" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500 z-10">&times;</button>
+
+        <div class="w-full h-52 sm:h-64 md:h-96 mb-4">
+            <iframe id="previewTrailer" class="w-full h-full rounded" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+   </div>
+</div>
+
+
+<script>
+    function openPreview(trailerUrl) {
+        const overlay = document.getElementById('previewOverlay');
+        const iframe = document.getElementById('previewTrailer');
+        iframe.src = trailerUrl;
+        overlay.classList.remove('scale-0');
+    }
+
+    function closePreview() {
+        const overlay = document.getElementById('previewOverlay');
+        const iframe = document.getElementById('previewTrailer');
+        overlay.classList.add('scale-0');
+        iframe.src = ''; 
+    }
+</script>
+
+
+</body>
+</html>

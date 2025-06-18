@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-black text-white">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Avengers: Endgame Trailer</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <style>
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 0.5rem;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .cast-container::-webkit-scrollbar {
+      display: none;
+    }
+    .cast-container {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .cast-img {
+      transition: transform 0.4s ease;
+    }
+    .cast-img:hover {
+      transform: scale(0.9);
+    }
+
+    @media (hover: none) {
+  .movie-card:active {
+    transform: scale(1.05); 
+  }
+}
+  </style>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }
+  </script>
+</head>
+
+<body class="bg-black text-white min-h-screen p-6">
+
+<nav class="fixed top-0 w-full bg-gradient-to-b from-black to-transparent z-50 px-4 md:px-12 py-4">
+  <div class="flex justify-between items-center flex-nowrap w-full">
+    
+    <!-- Logo -->
+    <div class="text-red-600 font-bold text-xl sm:text-2xl md:text-3xl">MOVIE</div>  
+  </div>
+</nav>
+
+  <!-- Trailer -->
+  <div class="max-w-5xl mx-auto mb-10 mt-24">
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/TcMBFSGVi1c" title="Avengers: Endgame Trailer" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <main class="container mx-auto px-4 md:px-12 pb-20">
+    <section class="mb-8">
+  <h2 class="text-xl md:text-2xl font-bold mb-4">Cast</h2>
+  <div class="category-container flex space-x-4 overflow-x-auto pb-4">
+    
+    <div class="movie-card flex-shrink-0 w-40 md:w-48 relative transform transition-transform duration-300 hover:scale-105">
+      <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('downey.jpg');">
+        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+          <h3 class="font-bold">Robert Downey Jr</h3>
+          <div class="flex items-center text-xs">
+            <h2 class="font-bold">Iron Man</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="movie-card flex-shrink-0 w-40 md:w-48 relative transform transition-transform duration-300 hover:scale-105">
+      <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('evans.jpg');">
+        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+          <h3 class="font-bold">Chris Evans</h3>
+          <div class="flex items-center text-xs">
+            <h2 class="font-bold">Captain America</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<div class="movie-card flex-shrink-0 w-40 md:w-48 relative transform transition-transform duration-300 hover:scale-105">
+      <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('hulk.jpg');">
+        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+          <h3 class="font-bold">Mark Ruffalo</h3>
+          <div class="flex items-center text-xs">
+            <h2 class="font-bold">Hulk</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="movie-card flex-shrink-0 w-40 md:w-48 relative transform transition-transform duration-300 hover:scale-105">
+      <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('thor.jpg');">
+        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+          <h3 class="font-bold">Chris Hemsworth</h3>
+          <div class="flex items-center text-xs">
+            <h2 class="font-bold">Thor</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="movie-card flex-shrink-0 w-40 md:w-48 relative transform transition-transform duration-300 hover:scale-105">
+      <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('blackwidow.jpg');">
+        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+          <h3 class="font-bold">Scarlett Johansson</h3>
+          <div class="flex items-center text-xs">
+            <h2 class="font-bold">Black Widow</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="movie-card flex-shrink-0 w-40 md:w-48 relative transform transition-transform duration-300 hover:scale-105">
+      <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('hawkeye.jpg');">
+        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+          <h3 class="font-bold">Jeremy Renner</h3>
+          <div class="flex items-center text-xs">
+            <h2 class="font-bold">Hawkeye</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="movie-card flex-shrink-0 w-40 md:w-48 relative transform transition-transform duration-300 hover:scale-105">
+      <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('ant.jpg');">
+        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+          <h3 class="font-bold">Paul Rudd</h3>
+          <div class="flex items-center text-xs">
+            <h2 class="font-bold">Ant Man</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="movie-card flex-shrink-0 w-40 md:w-48 relative transform transition-transform duration-300 hover:scale-105">
+      <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('marvel1.jpg');">
+        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+          <h3 class="font-bold">Brie Larson</h3>
+          <div class="flex items-center text-xs">
+            <h2 class="font-bold">Captain Marvel</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="movie-card flex-shrink-0 w-40 md:w-48 relative transform transition-transform duration-300 hover:scale-105">
+      <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('warmachine.jpg');">
+        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+          <h3 class="font-bold">Don Cheadle</h3>
+          <div class="flex items-center text-xs">
+            <h2 class="font-bold">War Machine</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="movie-card flex-shrink-0 w-40 md:w-48 relative transform transition-transform duration-300 hover:scale-105">
+      <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('thanos.jpg');">
+        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+          <h3 class="font-bold">Josh Brolin</h3>
+          <div class="flex items-center text-xs">
+            <h2 class="font-bold">Thanos</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="movie-card flex-shrink-0 w-40 md:w-48 relative transform transition-transform duration-300 hover:scale-105">
+      <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('spider.jpg');">
+        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+          <h3 class="font-bold">Tom Holland</h3>
+          <div class="flex items-center text-xs">
+            <h2 class="font-bold">Spider Man</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="movie-card flex-shrink-0 w-40 md:w-48 relative transform transition-transform duration-300 hover:scale-105">
+      <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('witch.jpg');">
+        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+          <h3 class="font-bold">Elizabeth Olsen</h3>
+          <div class="flex items-center text-xs">
+            <h2 class="font-bold">Scarlet Witch</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="movie-card flex-shrink-0 w-40 md:w-48 relative transform transition-transform duration-300 hover:scale-105">
+      <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('nebula.jpg');">
+        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+          <h3 class="font-bold">Karen Gillan</h3>
+          <div class="flex items-center text-xs">
+            <h2 class="font-bold">Nebula</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="movie-card flex-shrink-0 w-40 md:w-48 relative transform transition-transform duration-300 hover:scale-105">
+      <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('strange.jpg');">
+        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+          <h3 class="font-bold">Benedict Cumberbatch</h3>
+          <div class="flex items-center text-xs">
+            <h2 class="font-bold">Doctor Strange</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="movie-card flex-shrink-0 w-40 md:w-48 relative transform transition-transform duration-300 hover:scale-105">
+      <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('patt.jpg');">
+        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+          <h3 class="font-bold">Chris Pratt</h3>
+          <div class="flex items-center text-xs">
+            <h2 class="font-bold">Star Lord</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="movie-card flex-shrink-0 w-40 md:w-48 relative transform transition-transform duration-300 hover:scale-105">
+      <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('chadwick.jpg');">
+        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+          <h3 class="font-bold">Chadwick Boseman</h3>
+          <div class="flex items-center text-xs">
+            <h2 class="font-bold">Black Panther</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="movie-card flex-shrink-0 w-40 md:w-48 relative transform transition-transform duration-300 hover:scale-105">
+      <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('tessa.jpg');">
+        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+          <h3 class="font-bold">Tessa Thompson</h3>
+          <div class="flex items-center text-xs">
+            <h2 class="font-bold">Valkyrie</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="movie-card flex-shrink-0 w-40 md:w-48 relative transform transition-transform duration-300 hover:scale-105">
+      <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('falcon.jpg');">
+        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+          <h3 class="font-bold">Anthony Mackie</h3>
+          <div class="flex items-center text-xs">
+            <h2 class="font-bold">Falcon</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="movie-card flex-shrink-0 w-40 md:w-48 relative transform transition-transform duration-300 hover:scale-105">
+      <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('winter.jpg');">
+        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+          <h3 class="font-bold">Sebastian Stan</h3>
+          <div class="flex items-center text-xs">
+            <h2 class="font-bold">Winter Soldier</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="movie-card flex-shrink-0 w-40 md:w-48 relative transform transition-transform duration-300 hover:scale-105">
+      <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('gamora.jpg');">
+        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+          <h3 class="font-bold">Zoe Saldaña</h3>
+          <div class="flex items-center text-xs">
+            <h2 class="font-bold">Gamora</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="movie-card flex-shrink-0 w-40 md:w-48 relative transform transition-transform duration-300 hover:scale-105">
+      <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('peggy.jpg');">
+        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+          <h3 class="font-bold">Hayley Atwell</h3>
+          <div class="flex items-center text-xs">
+            <h2 class="font-bold">Peggy Carter</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="movie-card flex-shrink-0 w-40 md:w-48 relative transform transition-transform duration-300 hover:scale-105">
+      <div class="h-60 md:h-72 bg-cover bg-center rounded overflow-hidden relative" style="background-image: url('jane.jpg');">
+        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+          <h3 class="font-bold">Natalie Portman</h3>
+          <div class="flex items-center text-xs">
+            <h2 class="font-bold">Jane Foster</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  </main>
+
+</body>
+</html>

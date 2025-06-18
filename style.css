@@ -1,0 +1,198 @@
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #141414;
+            color: #fff;
+        }
+        .hero-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  padding: 2rem;
+  color: white;
+
+  background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0.8) 100%),
+    url('Avengers.jpg'),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600' viewBox='0 0 1200 600'%3E%3Crect width='1200' height='600' fill='%23000'/%3E%3Cpath d='M0,250 Q300,150 600,300 T1200,250' stroke='%23E50914' stroke-width='4' fill='none'/%3E%3Cpath d='M0,350 Q300,250 600,400 T1200,350' stroke='%23E50914' stroke-opacity='0.5' stroke-width='4' fill='none'/%3E%3C/svg%3E");
+  
+  background-size: cover, cover, contain;
+  background-position: center, center, bottom;
+  background-repeat: no-repeat;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+@media (min-width: 640px) {
+  .hero-section h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-section h1 {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 640px) {
+  .hero-section {
+    padding: 1rem;
+  }
+}
+
+        .category-container::-webkit-scrollbar {
+            display: none;
+        }
+        .movie-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .movie-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+            z-index: 10;
+        }
+        .navbar-link {
+            position: relative;
+        }
+        .navbar-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #E50914;
+            transition: width 0.3s ease;
+        }
+        .navbar-link:hover::after {
+            width: 100%;
+        }
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 100; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgba(0,0,0,0.9); 
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: #1a1a1a;
+            margin: auto;
+            padding: 20px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 800px;
+            position: relative;
+        }
+        .close-button {
+            color: #aaa;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close-button:hover,
+        .close-button:focus {
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; 
+            height: 0;
+            overflow: hidden;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+   .main-content {
+  margin-top: -2rem; 
+}
+
+@media (min-width: 768px) {
+  .main-content {
+    margin-top: -3rem; 
+  }
+}
+
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1000; /
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgba(0,0,0,0.9); 
+            justify-content: center; 
+            align-items: center; 
+        }
+
+        .modal-content {
+            position: relative;
+            background-color: #fefefe;
+            margin: auto; 
+            padding: 0;
+            border: 1px solid #888;
+            width: 80%; 
+            max-width: 960px;
+        }
+
+        .close-button {
+            color: white;
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .close-button:hover,
+        .close-button:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .video-container {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            aspect-ratio: 16 / 9;
+            width: 100%;
+        }
+
+        .video-container iframe {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero-section.zoomed-out {
+            transform: scale(0.9);
+            opacity: 0.7;
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+    
+

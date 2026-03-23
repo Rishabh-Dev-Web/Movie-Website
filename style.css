@@ -16,15 +16,10 @@
     linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0.8) 100%),
     url('Avengers.jpg'),
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600' viewBox='0 0 1200 600'%3E%3Crect width='1200' height='600' fill='%23000'/%3E%3Cpath d='M0,250 Q300,150 600,300 T1200,250' stroke='%23E50914' stroke-width='4' fill='none'/%3E%3Cpath d='M0,350 Q300,250 600,400 T1200,350' stroke='%23E50914' stroke-opacity='0.5' stroke-width='4' fill='none'/%3E%3C/svg%3E");
-  background-size: cover, auto 120%, contain;
-  background-position: center, 0% 50%, bottom;
+  
+  background-size: cover, cover, contain;
+  background-position: center, center, bottom;
   background-repeat: no-repeat;
-  animation: heroPan 30s infinite alternate ease-in-out;
-}
-
-@keyframes heroPan {
-  0% { background-position: center, 0% 50%, bottom; }
-  100% { background-position: center, 100% 50%, bottom; }
 }
 
 .hero-section h1 {
@@ -52,37 +47,13 @@
         .category-container::-webkit-scrollbar {
             display: none;
         }
-        
-        /* Netflix-style Smooth Scroll */
-        .category-wrapper {
-            position: relative;
-        }
-        .category-container {
-            scroll-behavior: smooth;
-            -ms-overflow-style: none; /* IE and Edge */
-            scrollbar-width: none;    /* Firefox */
-        }
-        
         .movie-card {
-            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease;
-            transform-origin: center left;
-            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .movie-card:hover {
-            transform: scale(1.15);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.8);
-            z-index: 30;
-        }
-        .movie-card .bg-gradient-to-t {
-            opacity: 0;
-            transform: translateY(10px);
-            transition: opacity 0.3s ease, transform 0.3s ease;
-            pointer-events: none;
-        }
-        .movie-card:hover .bg-gradient-to-t {
-            opacity: 1;
-            transform: translateY(0);
-            pointer-events: auto;
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+            z-index: 10;
         }
         .navbar-link {
             position: relative;
@@ -164,7 +135,7 @@
         .modal {
             display: none; 
             position: fixed; 
-            z-index: 1000;
+            z-index: 1000; /
             left: 0;
             top: 0;
             width: 100%; 
@@ -223,82 +194,5 @@
             opacity: 0.7;
             transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
         }
+    
 
-        /* Netflix-style Scroll Arrows */
-        .row-scroll-btn {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 40px;
-            background: rgba(0,0,0,0.4);
-            color: white;
-            border: none;
-            font-size: 2rem;
-            cursor: pointer;
-            z-index: 20;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.3s ease, background 0.3s ease;
-            margin-bottom: 1rem;
-        }
-        @media (min-width: 768px) {
-            .row-scroll-btn { width: 60px; font-size: 3rem; }
-        }
-        section:hover .row-scroll-btn {
-            opacity: 1;
-        }
-        .row-scroll-btn:hover {
-            background: rgba(0,0,0,0.8);
-        }
-        .row-scroll-btn.left { left: 0; }
-        .row-scroll-btn.right { right: 0; }
-
-        /* Splash Screen Overlay */
-        .splash-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #000;
-            z-index: 9999;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
-        }
-        .splash-overlay.hidden {
-            opacity: 0;
-            visibility: hidden;
-        }
-        .netflix-logo-splash {
-            font-size: 10vw; 
-            color: #e50914;
-            font-family: 'Arial Black', sans-serif;
-            animation: fadeInSplash 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
-            text-align: center;
-            font-weight: 900;
-            letter-spacing: 4px;
-        }
-        @media (min-width: 768px) {
-            .netflix-logo-splash { font-size: 5rem; }
-        }
-        .loader-splash {
-            margin-top: 3vh;
-            border: 4px solid #222;
-            border-top: 4px solid #e50914;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            animation: spinSplash 1s linear infinite;
-        }
-        @keyframes spinSplash {
-            to { transform: rotate(360deg); }
-        }
-        @keyframes fadeInSplash {
-            from { opacity: 0; transform: scale(0.85); }
-            to   { opacity: 1; transform: scale(1); }
-        }

@@ -17,7 +17,7 @@
             </div>
             <div class="flex items-center space-x-4">
                 <div class="relative">
-                    <input type="text" placeholder="Search" class="bg-black bg-opacity-60 text-white px-3 py-1 rounded border border-gray-600 focus:outline-none focus:border-white transition">
+                    <input type="text" id="searchInput" onkeyup="handleSearch()" placeholder="Search" class="bg-black bg-opacity-60 text-white px-3 py-1 rounded border border-gray-600 focus:outline-none focus:border-white transition">
                 </div>
                 <div class="w-8 h-8 bg-blue-500 rounded text-white flex items-center justify-center">
                     <span>R</span>
@@ -60,7 +60,18 @@
     </div>
 </section>
 
-    <main class="container mx-auto px-4 md:px-12 pb-20 mt-20 relative z-20">
+    <main class="container mx-auto px-4 md:px-12 pb-20 mt-10 relative z-20">
+        <!-- Category Filter Chips -->
+        <div class="flex flex-wrap gap-2 sm:gap-4 mb-10 justify-center">
+            <button onclick="filterCategory('All', this)" class="category-btn bg-red-600 text-white px-4 py-1 rounded-full text-sm font-semibold transition hover:bg-red-700">All</button>
+            <button onclick="filterCategory('Superhero Movies', this)" class="category-btn bg-zinc-800 text-white px-4 py-1 rounded-full text-sm font-semibold transition hover:bg-zinc-700">Superhero</button>
+            <button onclick="filterCategory('Thriller/Adventure Movies', this)" class="category-btn bg-zinc-800 text-white px-4 py-1 rounded-full text-sm font-semibold transition hover:bg-zinc-700">Thriller</button>
+            <button onclick="filterCategory('Biographical Movies', this)" class="category-btn bg-zinc-800 text-white px-4 py-1 rounded-full text-sm font-semibold transition hover:bg-zinc-700">Biographical</button>
+            <button onclick="filterCategory('Action Movies', this)" class="category-btn bg-zinc-800 text-white px-4 py-1 rounded-full text-sm font-semibold transition hover:bg-zinc-700">Action</button>
+            <button onclick="filterCategory('Family/Kids Movies', this)" class="category-btn bg-zinc-800 text-white px-4 py-1 rounded-full text-sm font-semibold transition hover:bg-zinc-700">Family</button>
+            <button onclick="filterCategory('Horror Movies', this)" class="category-btn bg-zinc-800 text-white px-4 py-1 rounded-full text-sm font-semibold transition hover:bg-zinc-700">Horror</button>
+            <button onclick="filterCategory('Trending Shows', this)" class="category-btn bg-zinc-800 text-white px-4 py-1 rounded-full text-sm font-semibold transition hover:bg-zinc-700">Trending</button>
+        </div>
 
         <section class="mb-8">
             <h2 class="text-xl md:text-2xl font-bold mb-4">Superhero Movies</h2>
@@ -735,7 +746,7 @@
                     <ul class="space-y-2 text-sm text-gray-500">
                         <li><a href="#" class="hover:underline">Media Center</a></li>
                         <li><a href="#" class="hover:underline">Terms of Use</a></li>
-                        <li><a href="#" class="hover:underline">Contact Us</a></li>
+                        <li><a href="#" id="contactBtn" class="hover:underline">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
@@ -846,6 +857,116 @@
     }
 </script>
 
+<!-- Contact Modal -->
+<div id="contactModal" class="fixed inset-0 bg-black bg-opacity-80 text-white z-50 items-center justify-center transform scale-0 transition-transform duration-300 flex">
+    <div class="w-full max-w-md p-8 bg-zinc-900 rounded-xl shadow-2xl relative border border-gray-700">
+        <button id="closeContactBtn" class="absolute top-4 right-4 text-gray-400 text-3xl hover:text-red-500 z-10">&times;</button>
+        <h2 class="text-2xl font-bold mb-6">Contact Us</h2>
+        <form id="contactForm" class="space-y-4">
+            <div>
+                <label class="block text-sm mb-1 text-gray-400">Name</label>
+                <input type="text" required class="w-full bg-zinc-800 border border-gray-700 text-white px-4 py-2 rounded focus:outline-none focus:border-red-600">
+            </div>
+            <div>
+                <label class="block text-sm mb-1 text-gray-400">Email</label>
+                <input type="email" required class="w-full bg-zinc-800 border border-gray-700 text-white px-4 py-2 rounded focus:outline-none focus:border-red-600">
+            </div>
+            <div>
+                <label class="block text-sm mb-1 text-gray-400">Message</label>
+                <textarea rows="4" required class="w-full bg-zinc-800 border border-gray-700 text-white px-4 py-2 rounded focus:outline-none focus:border-red-600"></textarea>
+            </div>
+            <button type="submit" class="w-full bg-red-600 text-white font-bold py-2 rounded hover:bg-red-700 transition">Send Message</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    // Search Functionality
+    function handleSearch() {
+        const query = document.getElementById('searchInput').value.toLowerCase();
+        const cards = document.querySelectorAll('.movie-card');
+
+        cards.forEach(card => {
+            const bgDiv = card.querySelector('div');
+            // Safely get the background image url
+            if (bgDiv && bgDiv.style.backgroundImage) {
+                const bgImage = bgDiv.style.backgroundImage.toLowerCase();
+                if (bgImage.includes(query)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            }
+        });
+
+        // Hide empty sections
+        const sections = document.querySelectorAll('main section');
+        sections.forEach(section => {
+            const sectionCards = Array.from(section.querySelectorAll('.movie-card'));
+            if (sectionCards.length > 0) {
+                const hasVisibleCards = sectionCards.some(c => c.style.display !== 'none');
+                section.style.display = hasVisibleCards ? '' : 'none';
+            }
+        });
+    }
+
+    // Category Filter Functionality
+    function filterCategory(category, buttonElement) {
+        // Reset Search
+        document.getElementById('searchInput').value = '';
+        handleSearch(); // resets visibility of all cards
+
+        const sections = document.querySelectorAll('main section');
+        sections.forEach(section => {
+            const h2 = section.querySelector('h2');
+            if (h2) {
+                if (category === 'All' || h2.innerText === category) {
+                    section.style.display = '';
+                } else {
+                    section.style.display = 'none';
+                }
+            }
+        });
+
+        if (buttonElement) {
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                btn.classList.remove('bg-red-600', 'hover:bg-red-700');
+                btn.classList.add('bg-zinc-800', 'hover:bg-zinc-700');
+            });
+            buttonElement.classList.remove('bg-zinc-800', 'hover:bg-zinc-700');
+            buttonElement.classList.add('bg-red-600', 'hover:bg-red-700');
+        }
+    }
+
+    // Contact Form Functionality
+    const contactModal = document.getElementById('contactModal');
+    const contactBtn = document.getElementById('contactBtn');
+    const closeContactBtn = document.getElementById('closeContactBtn');
+    const contactForm = document.getElementById('contactForm');
+
+    contactBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        contactModal.classList.remove('scale-0');
+    });
+
+    closeContactBtn.addEventListener('click', () => {
+        contactModal.classList.add('scale-0');
+    });
+
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Thank you! Your message has been sent successfully.');
+        contactModal.classList.add('scale-0');
+        contactForm.reset();
+    });
+
+    // Close modal when clicking outside
+    contactModal.addEventListener('click', (e) => {
+        if (e.target === contactModal) {
+            contactModal.classList.add('scale-0');
+        }
+    });
+</script>
 
 </body>
 </html>
